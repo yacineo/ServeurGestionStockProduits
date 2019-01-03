@@ -23,3 +23,12 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+###ECLIPSE##
+src/main/java/META-INF/
+.settings
+.project
+.classpath
+target/
+test-output/
+node_modules/**
+.orig
