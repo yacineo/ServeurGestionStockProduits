@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.example.demo.util.RoleEnum;
+
 @Entity
 public class Role {
 	@Id
@@ -18,9 +20,9 @@ public class Role {
 		super();
 	}
 
-	public Role(String name) {
+	public Role(RoleEnum role) {
 		super();
-		this.name = name;
+		this.name = role.getName();
 	}
 
 	public Long getId() {

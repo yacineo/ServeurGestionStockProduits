@@ -7,37 +7,39 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.entity.Produit;
+import com.example.demo.entity.User;
 import com.example.demo.repository.ProduitRepository;
+import com.example.demo.repository.UserRepository;
 
 @Service
 @Primary
-public class ProduitService implements ICrudService<Produit, Long>{
+public class UserService implements ICrudService<User, Long>{
 
 	@Autowired
-	private ProduitRepository produitRepository;
+	private UserRepository userRepository;
 	
 	@Override
-	public List<Produit> getAll() {
-		return produitRepository.findAll();
+	public List<User> getAll() {
+		return userRepository.findAll();
 	}
 
 	@Override
-	public void add(Produit produit) {
-		produitRepository.save(produit);
+	public void add(User user) {
+		userRepository.save(user);
 		
 	}
 
 	@Override
-	public void update(Produit produit) {
-		produitRepository.save(produit);
+	public void update(User user) {
+		userRepository.save(user);
 		
 	}
 
 	@Override
 	public void delete(Long id) {
-		Produit produit = new Produit();
-		produit.setId(id);
-		produitRepository.delete(produit);
+		User user = new User();
+		user.setId(id);
+		userRepository.delete(user);
 		
 		
 	}
